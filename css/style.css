@@ -67,6 +67,10 @@ main {
     &#nav-bookmark {
       transform: scale(1.15);
     }
+
+    &:has(+ input:checked) {
+      color: var(--white);
+    }
   }
 }
 #home {
