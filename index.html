@@ -71,78 +71,88 @@
       </div>
     </header>
     <main>
-      <div>
+      <div class="search-con">
         <img src="./assets/icon-search.svg" alt="Search" />
         <input
+          class="outfit-light"
           type="text"
           name="search"
           id="search"
-          placeholder="  Search for movies or TV series Trending" />
+          placeholder="  Search for movies or TV series" />
       </div>
 
       <div id="home">
-        <div>
-          <h1>Trending</h1>
-          <div>
-            <div>
-              <img
-                src="./assets/icon-bookmark-empty.svg"
-                alt="empty bookmark" />
-            </div>
-            <picture>
-              <source
-                media="(min-width: 90rem)"
-                srcset="./assets/thumbnails/beyond-earth/trending/large.jpg" />
-              <img
-                loading="lazy"
-                src="./assets/thumbnails/beyond-earth/trending/small.jpg"
-                alt="" />
-            </picture>
-            <div>
-              <div>
-                <p>2019</p>
-                &dot;
-                <div>
-                  <img
-                    src="./assets/icon-category-movie.svg"
-                    alt="movie category" />
-                  <p>Movie</p>
-                </div>
-                &dot;
-                <p>PG</p>
+        <div class="trending-con outfit-light">
+          <h1 id="trending-header">Trending</h1>
+          <div class="trending-slider">
+            <div class="img-con">
+              <div class="bookmark-con">
+                <img
+                  loading="lazy"
+                  src="./assets/icon-bookmark-empty.svg"
+                  alt="empty bookmark" />
               </div>
-              <h3>Beyond Earth</h3>
-            </div>
-          </div>
-          <div>
-            <div>
-              <img
-                src="./assets/icon-bookmark-empty.svg"
-                alt="empty bookmark" />
-            </div>
-            <picture>
-              <source
-                media="(min-width: 90rem)"
-                srcset="./assets/thumbnails/bottom-gear/trending/large.jpg" />
-              <img
-                loading="lazy"
-                src="./assets/thumbnails/bottom-gear/trending/small.jpg"
-                alt="" />
-            </picture>
-            <div>
-              <div>
-                <p>2021</p>
-                &dot;
-                <div>
-                  <img
-                    src="./assets/icon-category-movie.svg"
-                    alt="movie category" />
-                  <p>Movie</p>
+              <picture>
+                <source
+                  media="(min-width: 90rem)"
+                  srcset="
+                    ./assets/thumbnails/beyond-earth/trending/large.jpg
+                  " />
+                <img
+                  class="trending-img"
+                  loading="lazy"
+                  src="./assets/thumbnails/beyond-earth/trending/small.jpg"
+                  alt="" />
+              </picture>
+              <div class="trending-details">
+                <div class="rating-con">
+                  <p>2019</p>
+                  &dot;
+                  <div>
+                    <img
+                      loading="lazy"
+                      src="./assets/icon-category-movie.svg"
+                      alt="movie category" />
+                    <p>Movie</p>
+                  </div>
+                  &dot;
+                  <p>PG</p>
                 </div>
-                &dot;
-                <p>PG</p>
+                <h3>Beyond Earth</h3>
               </div>
-              <h2>Bottom Gear</h2>
+            </div>
+            <div class="img-con">
+              <div>
+                <img
+                  class="bookmark-con"
+                  src="./assets/icon-bookmark-empty.svg"
+                  alt="empty bookmark" />
+              </div>
+              <picture>
+                <source
+                  media="(min-width: 90rem)"
+                  srcset="./assets/thumbnails/bottom-gear/trending/large.jpg" />
+                <img
+                  class="trending-img"
+                  loading="lazy"
+                  src="./assets/thumbnails/bottom-gear/trending/small.jpg"
+                  alt="" />
+              </picture>
+              <div class="trending-details">
+                <div class="rating-con">
+                  <p>2021</p>
+                  &dot;
+                  <div>
+                    <img
+                      src="./assets/icon-category-movie.svg"
+                      alt="movie category" />
+                    <p>Movie</p>
+                  </div>
+                  &dot;
+                  <p>PG</p>
+                </div>
+                <h2>Bottom Gear</h2>
+              </div>
             </div>
           </div>
         </div>
