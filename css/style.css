@@ -124,12 +124,26 @@ header {
   & picture {
     width: 15rem;
     height: 8.75rem;
+
+    & img {
+      border-radius: 0.5rem;
+    }
   }
 
   & .bookmark-con {
     position: absolute;
+    display: flex;
     top: 0.5rem;
     right: 0.5rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: hsl(from var(--dark-blue) h s l / 0.5);
+
+    align-items: center;
+    justify-content: center;
+    & img {
+    }
   }
 
   & .trending-details {
