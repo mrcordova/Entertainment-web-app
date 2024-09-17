@@ -224,8 +224,7 @@ main {
 }
 .recommend-con,
 #movies,
-#tv,
-#bookmarks {
+#tv {
   padding-inline: 1rem;
   display: flex;
   flex-wrap: wrap;
