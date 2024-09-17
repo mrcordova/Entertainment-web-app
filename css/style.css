@@ -225,7 +225,8 @@ main {
 .recommend-con,
 #movies,
 #tv {
-  padding-inline: 1rem;
+  /* padding-inline: 1rem; */
+  justify-content: center;
   display: flex;
   flex-wrap: wrap;
   gap: 0.9375rem;

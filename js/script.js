@@ -28,6 +28,7 @@ const category = {
 };
 const clone = templates.all.content.cloneNode(true);
 const trendingSlider = clone.querySelector(".trending-slider");
+const recommendCon = clone.querySelector(".recommend-con");
 console.log(data);
 for (const mediumObj of data) {
   //   console.log(mediumObj);
@@ -72,6 +73,56 @@ for (const mediumObj of data) {
                 <h2 class="outfit-medium title">${mediumObj.title}</h2>
                 </div>
                 </div>`
+    );
+  } else {
+    recommendCon.insertAdjacentHTML(
+      "beforeend",
+      `<div class="recommend-card outfit-light">
+              <div class="bookmark-con">
+                <img
+                  src=${
+                    mediumObj.isBookmarked
+                      ? "./assets/icon-bookmark-full.svg"
+                      : "./assets/icon-bookmark-empty.svg"
+                  }
+                  alt=${
+                    mediumObj.isBookmarked ? "bookmarked" : "not bookmarked"
+                  }  />
+              </div>
+              <picture>
+                <source
+                  media="(min-width: 90rem)"
+                  srcset="
+                    ${mediumObj.thumbnail.regular.large}
+                  " />
+                <source
+                  media="(min-width: 48rem)"
+                  srcset="
+                    ${mediumObj.thumbnail.regular.medium}
+                  " />
+                <img
+                  loading="lazy"
+                  src="${mediumObj.thumbnail.regular.small}"
+                  alt="the great lands" />
+              </picture>
+              <div class="trending-details">
+                <div class="rating-con">
+                  <p>${mediumObj.year}</p>
+                  &bull;
+                  <div class="cate-con">
+                    <img
+                      src="./assets/icon-category-${
+                        category[mediumObj.category]
+                      }.svg"
+                      alt="${mediumObj.category} category" />
+                    <p>${mediumObj.category}</p>
+                  </div>
+                  &bull;
+                  <p>${mediumObj.rating}</p>
+                </div>
+                <h3 class="outfit-medium title">${mediumObj.title}</h3>
+              </div>
+            </div>`
     );
   }
 }
