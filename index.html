@@ -269,8 +269,335 @@
           </div>
         </div>
       </div>
+
+      <template id="movie-template">
+        <div id="movies">
+          <h2 id="movie-header" class="outfit-light">Movies</h2>
+          <div class="recommend-card outfit-light">
+            <div class="bookmark-con">
+              <img
+                src="./assets/icon-bookmark-empty.svg"
+                alt="empty bookmark" />
+            </div>
+            <picture>
+              <source
+                media="(min-width: 90rem)"
+                srcset="
+                  ./assets/thumbnails/the-great-lands/regular/large.jpg
+                " />
+              <source
+                media="(min-width: 48rem)"
+                srcset="
+                  ./assets/thumbnails/the-great-lands/regular/medium.jpg
+                " />
+              <img
+                loading="lazy"
+                src="./assets/thumbnails/the-great-lands/regular/small.jpg"
+                alt="the great lands" />
+            </picture>
+            <div class="trending-details">
+              <div class="rating-con">
+                <p data-year="2019">2019</p>
+                &bull;
+                <div class="cate-con">
+                  <img
+                    src="./assets/icon-category-movie.svg"
+                    alt="movie category" />
+                  <p date-category="movie">Movie</p>
+                </div>
+                &bull;
+                <p data-rating="E">E</p>
+              </div>
+              <h3 class="outfit-medium title" data-title="The Great Lands">
+                The Great Lands
+              </h3>
+            </div>
+          </div>
+        </div>
+      </template>
+
+      <template id="tv-template">
+        <div id="tv">
+          <h2 id="tv-header" class="outfit-light">TV Series</h2>
+
+          <div class="recommend-card outfit-light">
+            <div class="bookmark-con">
+              <img
+                src="./assets/icon-bookmark-empty.svg"
+                alt="empty bookmark" />
+            </div>
+            <picture>
+              <source
+                media="(min-width: 90rem)"
+                srcset="
+                  ./assets/thumbnails/the-great-lands/regular/large.jpg
+                " />
+              <source
+                media="(min-width: 48rem)"
+                srcset="
+                  ./assets/thumbnails/the-great-lands/regular/medium.jpg
+                " />
+              <img
+                loading="lazy"
+                src="./assets/thumbnails/the-great-lands/regular/small.jpg"
+                alt="the great lands" />
+            </picture>
+            <div class="trending-details">
+              <div class="rating-con">
+                <p data-year="2019">2019</p>
+                &bull;
+                <div class="cate-con">
+                  <img
+                    src="./assets/icon-category-movie.svg"
+                    alt="movie category" />
+                  <p date-category="tv">Movie</p>
+                </div>
+                &bull;
+                <p data-rating="PG">PG</p>
+              </div>
+              <h3 class="outfit-medium title" data-title="The Diary">
+                The Diary
+              </h3>
+            </div>
+          </div>
+        </div>
+      </template>
       <!-- Display trending shows -->
 
+      <template id="bookmarks-template">
+        <div id="bookmarks">
+          <div class="recommend-con">
+            <h2 id="bookmarked-movies-header" class="outfit-light">
+              Bookmarked Movies
+            </h2>
+            <div class="recommend-card outfit-light">
+              <div class="bookmark-con">
+                <img
+                  src="./assets/icon-bookmark-empty.svg"
+                  alt="empty bookmark" />
+              </div>
+              <picture>
+                <source
+                  media="(min-width: 90rem)"
+                  srcset="
+                    ./assets/thumbnails/the-great-lands/regular/large.jpg
+                  " />
+                <source
+                  media="(min-width: 48rem)"
+                  srcset="
+                    ./assets/thumbnails/the-great-lands/regular/medium.jpg
+                  " />
+                <img
+                  loading="lazy"
+                  src="./assets/thumbnails/the-great-lands/regular/small.jpg"
+                  alt="the great lands" />
+              </picture>
+              <div class="trending-details">
+                <div class="rating-con">
+                  <p>2019</p>
+                  &bull;
+                  <div class="cate-con">
+                    <img
+                      src="./assets/icon-category-movie.svg"
+                      alt="movie category" />
+                    <p>Movie</p>
+                  </div>
+                  &bull;
+                  <p>E</p>
+                </div>
+                <h3 class="outfit-medium title">The Great Lands</h3>
+              </div>
+            </div>
+            <div class="recommend-card outfit-light">
+              <div class="bookmark-con">
+                <img
+                  src="./assets/icon-bookmark-empty.svg"
+                  alt="empty bookmark" />
+              </div>
+              <picture>
+                <source
+                  media="(min-width: 90rem)"
+                  srcset="./assets/thumbnails/the-diary/regular/large.jpg" />
+                <source
+                  media="(min-width: 48rem)"
+                  srcset="./assets/thumbnails/the-diary/regular/medium.jpg" />
+                <img
+                  loading="lazy"
+                  src="./assets/thumbnails/the-diary/regular/small.jpg"
+                  alt="the great lands" />
+              </picture>
+              <div class="trending-details">
+                <div class="rating-con">
+                  <p>2019</p>
+                  &bull;
+                  <div class="cate-con">
+                    <img
+                      src="./assets/icon-category-tv.svg"
+                      alt="tv category" />
+                    <p>TV Series</p>
+                  </div>
+                  &bull;
+                  <p>PG</p>
+                </div>
+                <h3 class="outfit-medium title">The Diary</h3>
+              </div>
+            </div>
+            <div class="recommend-card outfit-light">
+              <div class="bookmark-con">
+                <img
+                  src="./assets/icon-bookmark-empty.svg"
+                  alt="empty bookmark" />
+              </div>
+              <picture>
+                <source
+                  media="(min-width: 90rem)"
+                  srcset="
+                    ./assets/thumbnails/earths-untouched/regular/large.jpg
+                  " />
+                <source
+                  media="(min-width: 48rem)"
+                  srcset="
+                    ./assets/thumbnails/earths-untouched/regular/medium.jpg
+                  " />
+                <img
+                  loading="lazy"
+                  src="./assets/thumbnails/earths-untouched/regular/small.jpg"
+                  alt="the great lands" />
+              </picture>
+              <div class="trending-details">
+                <div class="rating-con">
+                  <p>2017</p>
+                  &bull;
+                  <div class="cate-con">
+                    <img
+                      src="./assets/icon-category-movie.svg"
+                      alt="movie category" />
+                    <p>Movie</p>
+                  </div>
+                  &bull;
+                  <p>18+</p>
+                </div>
+                <h3 class="outfit-medium title">Earth's Untouched</h3>
+              </div>
+            </div>
+          </div>
+          <div class="recommend-con">
+            <h2 id="bookmarked-tv-header" class="outfit-light">
+              Bookmarked TV Series
+            </h2>
+            <div class="recommend-card outfit-light">
+              <div class="bookmark-con">
+                <img
+                  src="./assets/icon-bookmark-empty.svg"
+                  alt="empty bookmark" />
+              </div>
+              <picture>
+                <source
+                  media="(min-width: 90rem)"
+                  srcset="
+                    ./assets/thumbnails/the-great-lands/regular/large.jpg
+                  " />
+                <source
+                  media="(min-width: 48rem)"
+                  srcset="
+                    ./assets/thumbnails/the-great-lands/regular/medium.jpg
+                  " />
+                <img
+                  loading="lazy"
+                  src="./assets/thumbnails/the-great-lands/regular/small.jpg"
+                  alt="the great lands" />
+              </picture>
+              <div class="trending-details">
+                <div class="rating-con">
+                  <p>2019</p>
+                  &bull;
+                  <div class="cate-con">
+                    <img
+                      src="./assets/icon-category-movie.svg"
+                      alt="movie category" />
+                    <p>Movie</p>
+                  </div>
+                  &bull;
+                  <p>E</p>
+                </div>
+                <h3 class="outfit-medium title">The Great Lands</h3>
+              </div>
+            </div>
+            <div class="recommend-card outfit-light">
+              <div class="bookmark-con">
+                <img
+                  src="./assets/icon-bookmark-empty.svg"
+                  alt="empty bookmark" />
+              </div>
+              <picture>
+                <source
+                  media="(min-width: 90rem)"
+                  srcset="./assets/thumbnails/the-diary/regular/large.jpg" />
+                <source
+                  media="(min-width: 48rem)"
+                  srcset="./assets/thumbnails/the-diary/regular/medium.jpg" />
+                <img
+                  loading="lazy"
+                  src="./assets/thumbnails/the-diary/regular/small.jpg"
+                  alt="the great lands" />
+              </picture>
+              <div class="trending-details">
+                <div class="rating-con">
+                  <p>2019</p>
+                  &bull;
+                  <div class="cate-con">
+                    <img
+                      src="./assets/icon-category-tv.svg"
+                      alt="tv category" />
+                    <p>TV Series</p>
+                  </div>
+                  &bull;
+                  <p>PG</p>
+                </div>
+                <h3 class="outfit-medium title">The Diary</h3>
+              </div>
+            </div>
+            <div class="recommend-card outfit-light">
+              <div class="bookmark-con">
+                <img
+                  src="./assets/icon-bookmark-empty.svg"
+                  alt="empty bookmark" />
+              </div>
+              <picture>
+                <source
+                  media="(min-width: 90rem)"
+                  srcset="
+                    ./assets/thumbnails/earths-untouched/regular/large.jpg
+                  " />
+                <source
+                  media="(min-width: 48rem)"
+                  srcset="
+                    ./assets/thumbnails/earths-untouched/regular/medium.jpg
+                  " />
+                <img
+                  loading="lazy"
+                  src="./assets/thumbnails/earths-untouched/regular/small.jpg"
+                  alt="the great lands" />
+              </picture>
+              <div class="trending-details">
+                <div class="rating-con">
+                  <p>2017</p>
+                  &bull;
+                  <div class="cate-con">
+                    <img
+                      src="./assets/icon-category-movie.svg"
+                      alt="movie category" />
+                    <p>Movie</p>
+                  </div>
+                  &bull;
+                  <p>18+</p>
+                </div>
+                <h3 class="outfit-medium title">Earth's Untouched</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </template>
       <!-- Display recommended shows -->
     </main>
   </body>

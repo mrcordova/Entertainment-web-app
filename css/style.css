@@ -222,14 +222,21 @@ main {
     }
   }
 }
-.recommend-con {
+.recommend-con,
+#movies,
+#tv,
+#bookmarks {
   padding-inline: 1rem;
   display: flex;
   flex-wrap: wrap;
   gap: 0.9375rem;
 }
 
-#recommend-header {
+#recommend-header,
+#movie-header,
+#tv-header,
+#bookmarked-movies-header,
+#bookmarked-tv-header {
   width: 100%;
   color: var(--white);
   font-size: 1.25rem;
