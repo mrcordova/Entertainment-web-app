@@ -138,7 +138,7 @@ const config = { attributes: false, childList: true, subtree: true };
 const callback = (mutationList, observer) => {
   for (const mutation of mutationList) {
     if (mutation.type === "childList") {
-      console.log(mutation);
+      //   console.log(mutation);
     } else if (mutation.type === "attributes") {
       console.log(`The ${mutation.attributeName} attribute was modified.`);
     }
@@ -480,6 +480,7 @@ function changePage(e) {
   //   console.log(container);
   //   updateCards(clone);
   mainEle.replaceChild(clone, mainEle.lastElementChild);
+  searchInput.value = "";
 }
 
 for (const input of inputs) {
@@ -487,10 +488,15 @@ for (const input of inputs) {
 }
 
 searchInput.addEventListener("input", (e) => {
-  const cards = mainEle.querySelectorAll(".recommend-card");
-  const header = cards[0].parentElement.children[0];
+  let cards = mainEle.querySelectorAll(".recommend-card");
+  let header = mainEle.querySelector("[data-header]");
 
-  //   console.log(header);
+  if (mainEle.lastElementChild.id == "home") {
+    cards = [
+      ...cards,
+      ...mainEle.lastElementChild.querySelectorAll(".img-con"),
+    ];
+  }
   let amountFound = 0;
 
   //   console.log(mainEle.querySelector("h2"));
