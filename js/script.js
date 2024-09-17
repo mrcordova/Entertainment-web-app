@@ -35,7 +35,9 @@ for (const mediumObj of data) {
   if (mediumObj.isTrending) {
     trendingSlider.insertAdjacentHTML(
       "beforeend",
-      `<div class="img-con" data-category="${mediumObj.category}">
+      `<div class="img-con" data-title="${mediumObj.title}" data-category="${
+        mediumObj.category
+      }">
             <div class="bookmark-con">
             <img
             src=${
@@ -77,9 +79,9 @@ for (const mediumObj of data) {
   } else {
     recommendCon.insertAdjacentHTML(
       "beforeend",
-      `<div class="recommend-card outfit-light" data-category="${
-        mediumObj.category
-      }">
+      `<div class="recommend-card outfit-light" data-title="${
+        mediumObj.title
+      }" data-category="${mediumObj.category}">
               <div class="bookmark-con">
                 <img
                   src=${
@@ -156,7 +158,9 @@ function updateCards(id, clone) {
       if (mediumObj.isTrending) {
         container.children[0].children[1].insertAdjacentHTML(
           "beforeend",
-          `<div class="img-con" data-category="${mediumObj.category}">
+          `<div class="img-con" data-title="${
+            mediumObj.title
+          }" data-category="${mediumObj.category}">
             <div class="bookmark-con">
             <img
             src=${
@@ -198,9 +202,9 @@ function updateCards(id, clone) {
       } else {
         container.children[1].insertAdjacentHTML(
           "beforeend",
-          `<div class="recommend-card outfit-light" data-category="${
-            mediumObj.category
-          }">
+          `<div class="recommend-card outfit-light" data-title="${
+            mediumObj.title
+          }" data-category="${mediumObj.category}">
               <div class="bookmark-con">
                 <img
                   src=${
@@ -252,9 +256,9 @@ function updateCards(id, clone) {
       if (container.id === "movie" && mediumObj.category == "Movie") {
         container.insertAdjacentHTML(
           "beforeend",
-          `<div class="recommend-card outfit-light" data-category="${
-            mediumObj.category
-          }">
+          `<div class="recommend-card outfit-light" data-title="${
+            mediumObj.title
+          }" data-category="${mediumObj.category}">
               <div class="bookmark-con">
                 <img
                   src=${
@@ -304,9 +308,9 @@ function updateCards(id, clone) {
       } else if (container.id === "tv" && mediumObj.category == "TV Series") {
         container.insertAdjacentHTML(
           "beforeend",
-          `<div class="recommend-card outfit-light" data-category="${
-            mediumObj.category
-          }">
+          `<div class="recommend-card outfit-light" data-title="${
+            mediumObj.title
+          }" data-category="${mediumObj.category}">
               <div class="bookmark-con">
                 <img
                   src=${
@@ -357,9 +361,9 @@ function updateCards(id, clone) {
         if (mediumObj.isBookmarked && mediumObj.category === "Movie") {
           container.children[0].insertAdjacentHTML(
             "beforeend",
-            `<div class="recommend-card outfit-light" data-category="${
-              mediumObj.category
-            }">
+            `<div class="recommend-card outfit-light" data-title="${
+              mediumObj.title
+            }" data-category="${mediumObj.category}">
               <div class="bookmark-con">
                 <img
                   src=${
@@ -412,9 +416,9 @@ function updateCards(id, clone) {
         ) {
           container.children[1].insertAdjacentHTML(
             "beforeend",
-            `<div class="recommend-card outfit-light" data-category="${
-              mediumObj.category
-            }">
+            `<div class="recommend-card outfit-light" data-title="${
+              mediumObj.title
+            }" data-category="${mediumObj.category}">
               <div class="bookmark-con">
                 <img
                   src=${
@@ -481,3 +485,29 @@ function changePage(e) {
 for (const input of inputs) {
   input.addEventListener("click", changePage);
 }
+
+searchInput.addEventListener("input", (e) => {
+  const cards = mainEle.querySelectorAll(".recommend-card");
+  const header = cards[0].parentElement.children[0];
+
+  //   console.log(header);
+  let amountFound = 0;
+
+  //   console.log(mainEle.querySelector("h2"));
+
+  cards.forEach((card) => {
+    const title = card.dataset.title.toLowerCase();
+    // console.log(title.includes(e.currentTarget.value.toLowerCase()));
+    if (title.includes(e.currentTarget.value.toLowerCase())) {
+      card.style.display = "flex";
+      amountFound++;
+    } else {
+      card.style.display = "none";
+    }
+  });
+
+  header.textContent =
+    e.currentTarget.value == ""
+      ? header.dataset.header
+      : `Found ${amountFound} results for '${e.currentTarget.value}'`;
+});
