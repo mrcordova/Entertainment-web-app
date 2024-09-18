@@ -148,7 +148,7 @@ main {
       color: transparent;
     }
 
-    &[alt="bookmarked"] {
+    &:has(+ input:checked) {
       & path {
         color: var(--white);
       }
@@ -160,14 +160,18 @@ main {
     background-color: var(--white);
 
     & svg {
-      stroke: black;
-      stroke-width: 3;
+      /* stroke: black; */
+      /* stroke-width: 3; */
       color: var(--white);
 
       & path {
         stroke: hsl(from var(--dark-blue) h s l / 0.5);
       }
     }
+  }
+
+  & input {
+    display: none;
   }
 }
 
