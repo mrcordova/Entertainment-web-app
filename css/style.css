@@ -43,22 +43,30 @@ header {
   justify-content: space-between;
   background-color: var(--semi-dark-blue);
 
+  padding-block: clamp(1.125rem, 0.7672rem + 1.5267vw, 1.5rem)
+    clamp(1.125rem, 0.8626rem + 1.1196vw, 1.4rem);
+
+  padding-inline: clamp(1rem, 0.5229rem + 2.0356vw, 1.5rem);
+  margin-inline: clamp(0rem, -1.4909rem + 6.3613vw, 1.5625rem);
+
+  margin-block-start: clamp(0rem, -1.3717rem + 5.8524vw, 1.4375rem);
+  border-radius: clamp(0rem, -0.5964rem + 2.5445vw, 0.625rem);
   /* Mobile */
-  padding-block: 1.125rem;
-  padding-inline: 1rem;
+  /* padding-block: 1.125rem; */
+  /* padding-inline: 1rem; */
 
   /* Tablet */
-  margin-inline: 1.5625rem;
-  margin-block-start: 1.4375rem;
-  border-radius: 0.625rem;
-  padding-inline: 1.5rem;
-  padding-block: 1.5rem 1.4rem;
+  /* padding-block: 1.5rem 1.4rem; */
+  /* padding-inline: 1.5rem; */
+  /* margin-inline: 1.5625rem; */
+  /* margin-block-start: 1.4375rem; */
+  /* border-radius: 0.625rem; */
   /* Desktop */
+  padding-block: 1.838125rem 0;
+  padding-inline: 1.363125rem 2.63375rem;
   margin-inline: 2.625rem 0;
   margin-block: 2.375rem;
   border-radius: 1.25rem;
-  padding-inline: 1.363125rem 2.63375rem;
-  padding-block: 1.838125rem 0;
 }
 main {
   margin-block-end: 3.8125rem;
@@ -402,7 +410,31 @@ main {
   letter-spacing: -0.03125rem;
   padding-block-end: 0.1875rem;
 }
-
+@media (min-width: 48rem) {
+  header {
+    padding-block: clamp(1.5rem, 1.1136rem + 0.8051vw, 1.8381rem)
+      clamp(0rem, 3rem + -3.3333vw, 1.4rem);
+    padding-inline: clamp(1.3631rem, 1.6564rem + -0.3259vw, 1.5rem)
+      clamp(1.5rem, 0.2043rem + 2.6994vw, 2.6338rem);
+    margin-inline: clamp(1.5625rem, 0.3482rem + 2.5298vw, 2.625rem)
+      clamp(0rem, 3.3482rem + -3.7202vw, 1.5625rem);
+    margin-block: clamp(1.4375rem, 0.3661rem + 2.2321vw, 2.375rem)
+      clamp(0rem, -2.7143rem + 5.6548vw, 2.375rem);
+    border-radius: clamp(0.625rem, -0.0893rem + 1.4881vw, 1.25rem);
+    /* Tablet */
+    /* padding-block: 1.5rem 1.4rem; */
+    /* padding-inline: 1.5rem; */
+    /* margin-inline: 1.5625rem; */
+    /* margin-block-start: 1.4375rem; */
+    /* border-radius: 0.625rem; */
+    /* Desktop */
+    /* padding-block: 1.838125rem 0; */
+    /* padding-inline: 1.363125rem 2.63375rem; */
+    /* margin-inline: 2.625rem 0; */
+    /* margin-block: 2.375rem; */
+    /* border-radius: 1.25rem; */
+  }
+}
 @media (min-width: 90rem) {
   body {
     flex-direction: row;
