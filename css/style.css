@@ -135,9 +135,40 @@ main {
   height: 2rem;
   border-radius: 50%;
   background-color: hsl(from var(--dark-blue) h s l / 0.5);
+  color: var(--white);
 
   align-items: center;
   justify-content: center;
+
+  & svg {
+    /* color: hsl(from var(--dark-blue) h s l / 0.5); */
+
+    & path {
+      stroke: var(--white);
+      color: transparent;
+    }
+
+    &[alt="bookmarked"] {
+      & path {
+        color: var(--white);
+      }
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: var(--white);
+
+    & svg {
+      stroke: black;
+      stroke-width: 3;
+      color: var(--white);
+
+      & path {
+        stroke: hsl(from var(--dark-blue) h s l / 0.5);
+      }
+    }
+  }
 }
 
 .img-con {
