@@ -284,9 +284,13 @@ main {
 .recommend-card {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
   position: relative;
+  /* Mobile */
   width: 10.25rem;
+  gap: 0.5rem;
+  /* Tablet */
+  width: 13.75rem;
+  gap: 0.5rem;
 
   & .trending-details {
     position: static;
@@ -316,11 +320,15 @@ main {
 .recommend-con,
 #movie,
 #tv {
-  padding-inline: 1rem;
   /* justify-content: center; */
   display: flex;
   flex-wrap: wrap;
+  /* Mobile */
+  padding-inline: 1rem;
   gap: 0.9375rem;
+  /* Tablet */
+  padding-inline: 1.5rem;
+  gap: 1.8125rem;
 }
 
 #recommend-header,
@@ -330,9 +338,14 @@ main {
 #bookmarked-tv-header {
   width: 100%;
   color: var(--white);
+  /* Mobile */
   font-size: 1.25rem;
   line-height: 1.25;
   letter-spacing: -0.019375rem;
-  /* padding-block-end: 1.5rem; */
   padding-block-end: 0.5625rem;
+  /* Tablet */
+  font-size: 2rem;
+  line-height: 1.25;
+  letter-spacing: -0.03125rem;
+  padding-block-end: 1.5rem;
 }
