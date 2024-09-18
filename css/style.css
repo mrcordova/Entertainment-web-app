@@ -333,7 +333,8 @@ main {
 }
 #trending-header {
   font-size: clamp(1.25rem, 0.5344rem + 3.0534vw, 2rem);
-  letter-spacing: clamp(-0.3125rem, 0.2603rem + -1.1934vw, -0.0194rem);
+  letter-spacing: clamp(-0.0312rem, -0.008rem + -0.0483vw, -0.0194rem);
+
   /* Mobile */
   /* font-size: 1.25rem; */
   /* letter-spacing: -0.019375rem; */
@@ -419,21 +420,25 @@ main {
 #bookmarked-tv-header {
   width: 100%;
   color: var(--white);
+  font-size: clamp(1.25rem, 0.5344rem + 3.0534vw, 2rem);
+  letter-spacing: clamp(-0.0312rem, -0.008rem + -0.0483vw, -0.0194rem);
+  line-height: 1.25;
+  padding-block-end: clamp(0.5625rem, -0.3321rem + 3.8168vw, 1.5rem);
   /* Mobile */
-  font-size: 1.25rem;
-  line-height: 1.25;
-  letter-spacing: -0.019375rem;
-  padding-block-end: 0.5625rem;
+  /* font-size: 1.25rem; */
+  /* line-height: 1.25; */
+  /* letter-spacing: -0.019375rem; */
+  /* padding-block-end: 0.5625rem; */
   /* Tablet */
-  font-size: 2rem;
-  line-height: 1.25;
-  letter-spacing: -0.03125rem;
-  padding-block-end: 1.5rem;
+  /* font-size: 2rem; */
+  /* line-height: 1.25; */
+  /* letter-spacing: -0.03125rem; */
+  /* padding-block-end: 1.5rem; */
   /*Dekstop */
-  font-size: 2rem;
-  line-height: 1.25;
-  letter-spacing: -0.03125rem;
-  padding-block-end: 0.1875rem;
+  /* font-size: 2rem; */
+  /* line-height: 1.25; */
+  /* letter-spacing: -0.03125rem; */
+  /* padding-block-end: 0.1875rem; */
 }
 @media (min-width: 48rem) {
   header {
@@ -551,6 +556,24 @@ main {
         /* line-height: 1.27; */
       }
     }
+  }
+
+  #recommend-header,
+  #movie-header,
+  #tv-header,
+  #bookmarked-movies-header,
+  #bookmarked-tv-header {
+    padding-block-end: clamp(0.1875rem, 3rem + -3.125vw, 1.5rem);
+    /* Tablet */
+    /* font-size: 2rem; */
+    /* line-height: 1.25; */
+    /* letter-spacing: -0.03125rem; */
+    /* padding-block-end: 1.5rem; */
+    /*Dekstop */
+    /* font-size: 2rem; */
+    /* line-height: 1.25; */
+    /* letter-spacing: -0.03125rem; */
+    /* padding-block-end: 0.1875rem; */
   }
 }
 @media (min-width: 90rem) {
