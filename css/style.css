@@ -20,10 +20,19 @@
   font-style: normal;
 }
 
+html {
+  height: 100%;
+  margin: 0 auto;
+  max-width: 90rem;
+}
+
 body {
   background-color: var(--dark-blue);
   display: flex;
   flex-direction: column;
+  min-height: 100%;
+
+  /* max-width: 90rem; */
 
   /* overflow-x: hidden; */
 }
@@ -44,9 +53,16 @@ header {
   border-radius: 0.625rem;
   padding-inline: 1.5rem;
   padding-block: 1.5rem 1.4rem;
+  /* Desktop */
+  margin-inline: 2rem 0;
+  margin-block: 2rem;
+  border-radius: 0.625rem;
+  padding-inline: 1.5rem;
+  padding-block: 1.5rem 1.4rem;
 }
 main {
   margin-block-end: 3.8125rem;
+  overflow-x: auto;
 }
 #logo {
   /* Mobile */
@@ -348,4 +364,24 @@ main {
   line-height: 1.25;
   letter-spacing: -0.03125rem;
   padding-block-end: 1.5rem;
+}
+
+@media (min-width: 90rem) {
+  body {
+    flex-direction: row;
+  }
+
+  header {
+    flex-direction: column;
+    max-width: 6rem;
+    max-height: 60rem;
+    justify-content: normal;
+  }
+
+  nav {
+    padding-block: 4.6875rem 34.5rem;
+  }
+  #nav-menu {
+    flex-direction: column;
+  }
 }
