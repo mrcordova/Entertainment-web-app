@@ -118,12 +118,13 @@ main {
 #home {
   display: flex;
   flex-direction: column;
+  gap: clamp(1.5rem, 0.6054rem + 3.8168vw, 2.4375rem);
   /* Mobile */
-  gap: 1.5rem;
+  /* gap: 1.5rem; */
   /* Tablet */
-  gap: 2.4375rem;
+  /* gap: 2.4375rem; */
   /* Desktop */
-  gap: 2.5rem;
+  /* gap: 2.5rem; */
 }
 #profile-con {
   /* Mobile */
@@ -437,6 +438,13 @@ main {
     /* border-radius: 1.25rem; */
   }
 
+  #home {
+    gap: clamp(2.4375rem, 2.3661rem + 0.1488vw, 2.5rem);
+    /* Tablet */
+    /* gap: 2.4375rem; */
+    /* Desktop */
+    /* gap: 2.5rem; */
+  }
   #nav-menu {
     gap: clamp(1.5rem, 0.3571rem + 2.381vw, 2.5rem);
   }
