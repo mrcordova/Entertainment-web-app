@@ -147,14 +147,18 @@ main {
 .search-con {
   display: flex;
 
+  padding-block: clamp(1.5rem, 0.9633rem + 2.2901vw, 2.0625rem);
+  padding-inline: clamp(1rem, 0.4633rem + 2.2901vw, 1.5625rem);
+  gap: 1rem;
+
   /* Mobile */
-  padding-block: 1.5rem;
-  padding-inline: 1rem;
-  gap: 1rem;
+  /* padding-block: 1.5rem; */
+  /* padding-inline: 1rem; */
+  /* gap: 1rem; */
   /* Tablet */
-  padding-block: 2.0625rem;
-  padding-inline: 1.5625rem;
-  gap: 1rem;
+  /* padding-block: 2.0625rem; */
+  /* padding-inline: 1.5625rem; */
+  /* gap: 1rem; */
   /* Desktop */
   padding-block: 4rem 2.125rem;
   padding-inline: 1.625rem;
@@ -173,11 +177,12 @@ main {
     padding: 0;
     width: 100%;
     caret-color: var(--red);
+    font-size: clamp(1rem, 0.5229rem + 2.0356vw, 1.5rem);
     /* Mobile */
-    font-size: 1rem;
+    /* font-size: 1rem; */
     line-height: 1.25;
     /* Tablet */
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
     line-height: 1.25;
   }
 }
@@ -461,6 +466,20 @@ main {
     /* Desktop */
     /* width: 2.5rem; */
     /* height: 2.5rem; */
+  }
+  .search-con {
+    padding-block: clamp(2.0625rem, -0.1518rem + 4.6131vw, 4rem)
+      clamp(2.0625rem, 1.9911rem + 0.1488vw, 2.125rem);
+    padding-inline: clamp(1.5625rem, 1.4911rem + 0.1488vw, 1.625rem);
+    gap: clamp(1rem, 0.4286rem + 1.1905vw, 1.5rem);
+    /* Tablet */
+    /* padding-block: 2.0625rem; */
+    /* padding-inline: 1.5625rem; */
+    /* gap: 1rem; */
+    /* Desktop */
+    /* padding-block: 4rem 2.125rem; */
+    /* padding-inline: 1.625rem; */
+    /* gap: 1.5rem; */
   }
 }
 @media (min-width: 90rem) {
