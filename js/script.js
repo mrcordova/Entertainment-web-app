@@ -45,7 +45,9 @@ for (const mediumObj of data) {
                 ? "./assets/icon-bookmark-full.svg"
                 : "./assets/icon-bookmark-empty.svg"
             }
-            alt="empty bookmark" />
+            alt='${
+              mediumObj.isBookmarked ? "bookmarked" : "not bookmarked"
+            }'  />
             </div>
             <picture>
             <source
@@ -168,7 +170,9 @@ function updateCards(id, clone) {
                 ? "./assets/icon-bookmark-full.svg"
                 : "./assets/icon-bookmark-empty.svg"
             }
-            alt="empty bookmark" />
+            alt='${
+              mediumObj.isBookmarked ? "bookmarked" : "not bookmarked"
+            }'  />
             </div>
             <picture>
             <source
@@ -212,9 +216,9 @@ function updateCards(id, clone) {
                       ? "./assets/icon-bookmark-full.svg"
                       : "./assets/icon-bookmark-empty.svg"
                   }
-                  alt=${
+                  alt='${
                     mediumObj.isBookmarked ? "bookmarked" : "not bookmarked"
-                  }  />
+                  }'  />
               </div>
               <picture>
                 <source
@@ -266,9 +270,9 @@ function updateCards(id, clone) {
                       ? "./assets/icon-bookmark-full.svg"
                       : "./assets/icon-bookmark-empty.svg"
                   }
-                  alt=${
+                  alt='${
                     mediumObj.isBookmarked ? "bookmarked" : "not bookmarked"
-                  }  />
+                  }'/>
               </div>
               <picture>
                 <source
@@ -318,9 +322,9 @@ function updateCards(id, clone) {
                       ? "./assets/icon-bookmark-full.svg"
                       : "./assets/icon-bookmark-empty.svg"
                   }
-                  alt=${
+                  alt='${
                     mediumObj.isBookmarked ? "bookmarked" : "not bookmarked"
-                  }  />
+                  }'  />
               </div>
               <picture>
                 <source
@@ -371,9 +375,9 @@ function updateCards(id, clone) {
                       ? "./assets/icon-bookmark-full.svg"
                       : "./assets/icon-bookmark-empty.svg"
                   }
-                  alt=${
+                  alt='${
                     mediumObj.isBookmarked ? "bookmarked" : "not bookmarked"
-                  }  />
+                  }'   />
               </div>
               <picture>
                 <source
@@ -426,9 +430,9 @@ function updateCards(id, clone) {
                       ? "./assets/icon-bookmark-full.svg"
                       : "./assets/icon-bookmark-empty.svg"
                   }
-                  alt=${
+                  alt='${
                     mediumObj.isBookmarked ? "bookmarked" : "not bookmarked"
-                  }  />
+                  }'   />
               </div>
               <picture>
                 <source
@@ -477,6 +481,18 @@ function changePage(e) {
   searchInput.setAttribute("data-search", e.currentTarget.id);
   updateCards(e.currentTarget.id, clone);
 
+  clone.children[0].addEventListener("click", (e) => {
+    if (e.target.tagName === "IMG") {
+      const altText = e.target.getAttribute("alt");
+      if (altText.startsWith("bookmarked")) {
+        e.target.setAttribute("src", "./assets/icon-bookmark-empty.svg");
+        e.target.setAttribute("alt", "not bookmarked");
+      } else if (altText.startsWith("not bookmarked")) {
+        e.target.setAttribute("src", "./assets/icon-bookmark-full.svg");
+        e.target.setAttribute("alt", "bookmarked");
+      }
+    }
+  });
   //   console.log(container);
   //   updateCards(clone);
   mainEle.replaceChild(clone, mainEle.lastElementChild);
