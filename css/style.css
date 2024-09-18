@@ -284,30 +284,35 @@ main {
   color: var(--white);
   display: flex;
   flex-direction: column;
+  gap: clamp(0.1875rem, 0.3096rem + -0.2545vw, 0.25rem);
+  bottom: clamp(1rem, 0.5229rem + 2.0356vw, 1.5rem);
+  left: clamp(1rem, 0.5229rem + 2.0356vw, 1.5rem);
   /* Mobile */
-  gap: 0.25rem;
-  bottom: 1rem;
-  left: 1rem;
+  /* gap: 0.25rem; */
+  /* bottom: 1rem; */
+  /* left: 1rem; */
   /* Tablet */
-  gap: 0.1875rem;
-  bottom: 1.5rem;
-  left: 1.5rem;
+  /* gap: 0.1875rem; */
+  /* bottom: 1.5rem; */
+  /* left: 1.5rem; */
   /* Desktop */
-  gap: 0.3125rem;
-  bottom: 1.5rem;
-  left: 1.5rem;
+  /* gap: 0.3125rem; */
+  /* bottom: 1.5rem; */
+  /* left: 1.5rem; */
 
   & .rating-con {
     display: flex;
     text-align: center;
+    gap: 0.5rem;
+    font-size: clamp(0.75rem, 0.5711rem + 0.7634vw, 0.9375rem);
     /* Mobile */
     gap: 0.5rem;
-    font-size: 0.75rem;
+    /* font-size: 0.75rem; */
     line-height: 1.25;
     /* Tablet */
-    gap: 0.5rem;
-    font-size: 0.9375rem;
-    line-height: 1.266;
+    /* gap: 0.5rem; */
+    /* font-size: 0.9375rem; */
+    /* line-height: 1.266; */
   }
 
   & .cate-con {
@@ -317,21 +322,24 @@ main {
   }
 
   & .title {
+    font-size: clamp(0.9375rem, 0.4008rem + 2.2901vw, 1.5rem);
     /* Mobile */
-    font-size: 0.9375rem;
+    /* font-size: 0.9375rem; */
     line-height: 1.26;
     /* Tablet */
-    font-size: 1.5rem;
-    line-height: 1.25;
+    /* font-size: 1.5rem; */
+    /* line-height: 1.25; */
   }
 }
 #trending-header {
+  font-size: clamp(1.25rem, 0.5344rem + 3.0534vw, 2rem);
+  letter-spacing: clamp(-0.3125rem, 0.2603rem + -1.1934vw, -0.0194rem);
   /* Mobile */
-  font-size: 1.25rem;
-  letter-spacing: -0.019375rem;
+  /* font-size: 1.25rem; */
+  /* letter-spacing: -0.019375rem; */
   /* Tablet */
-  font-size: 2rem;
-  letter-spacing: -0.03125rem;
+  /* font-size: 2rem; */
+  /* letter-spacing: -0.03125rem; */
 
   line-height: 1.25;
   font-weight: 300;
@@ -491,6 +499,28 @@ main {
     /* Desktop */
     /* gap: 1.5625rem; */
     /* padding-inline-start: 1.625rem; */
+  }
+
+  .trending-details {
+    gap: clamp(0.1875rem, 0.0446rem + 0.2976vw, 0.3125rem);
+    /* bottom: 1.5rem; */
+    /* left: 1.5rem; */
+    /* Tablet */
+    /* gap: 0.1875rem; */
+    /* bottom: 1.5rem; */
+    /* left: 1.5rem; */
+    /* Desktop */
+    /* gap: 0.3125rem; */
+    /* bottom: 1.5rem; */
+    /* left: 1.5rem; */
+
+    & .rating-con {
+      line-height: 1.266;
+    }
+
+    & .title {
+      line-height: 1.25;
+    }
   }
 }
 @media (min-width: 90rem) {
