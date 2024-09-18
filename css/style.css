@@ -229,8 +229,6 @@ main {
   justify-content: center;
 
   & svg {
-    /* color: hsl(from var(--dark-blue) h s l / 0.5); */
-
     & path {
       stroke: var(--white);
       color: transparent;
@@ -248,8 +246,6 @@ main {
     background-color: var(--white);
 
     & svg {
-      /* stroke: black; */
-      /* stroke-width: 3; */
       color: var(--white);
 
       & path {
@@ -269,12 +265,14 @@ main {
   height: max-content;
 
   & picture {
+    width: clamp(15rem, 1.2834rem + 58.5242vw, 29.375rem);
+    height: clamp(8.75rem, 3.3826rem + 22.9008vw, 14.375rem);
     /* Mobile */
-    width: 15rem;
-    height: 8.75rem;
+    /* width: 15rem; */
+    /* height: 8.75rem; */
     /* Tablet */
-    width: 29.375rem;
-    height: 14.375rem;
+    /* width: 29.375rem; */
+    /* height: 14.375rem; */
 
     & img {
       border-radius: 0.5rem;
