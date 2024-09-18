@@ -90,7 +90,7 @@ main {
   /* Tablet and Mboile */
   gap: 1.5rem;
   /* Desktop */
-  gap: 2.5rem;
+  /* gap: 2.5rem; */
 
   & li {
     list-style: none;
@@ -435,6 +435,10 @@ main {
     /* margin-inline: 2.625rem 0; */
     /* margin-block: 2.375rem; */
     /* border-radius: 1.25rem; */
+  }
+
+  #nav-menu {
+    gap: clamp(1.5rem, 0.3571rem + 2.381vw, 2.5rem);
   }
 }
 @media (min-width: 90rem) {
