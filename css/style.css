@@ -73,12 +73,14 @@ main {
   overflow-x: auto;
 }
 #logo {
+  width: clamp(1.5625rem, 1.145rem + 1.7812vw, 2rem);
+  height: clamp(1.25rem, 0.916rem + 1.4249vw, 1.6rem);
   /* Mobile */
-  width: 1.5625rem;
-  height: 1.25rem;
+  /* width: 1.5625rem; */
+  /* height: 1.25rem; */
   /* Tablet */
-  width: 2rem;
-  height: 1.6rem;
+  /* width: 2rem; */
+  /* height: 1.6rem; */
 }
 #nav-menu {
   display: flex;
