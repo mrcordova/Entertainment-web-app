@@ -48,7 +48,7 @@ for (const mediumObj of data) {
               </label>
             <picture>
             <source
-            media="(min-width: 90rem)"
+            media="(min-width:48rem)"
             srcset="
             ${mediumObj.thumbnail.trending.large}
             " />
@@ -167,7 +167,7 @@ function updateCards(id, clone) {
               </label>
             <picture>
             <source
-            media="(min-width: 90rem)"
+            media="(min-width: 48rem)"
             srcset="
             ${mediumObj.thumbnail.trending.large}
             " />
@@ -463,10 +463,19 @@ function changePage(e) {
     // console.log(close);
     if (label) {
       const input = label.querySelector("input");
-      console.log(input.checked);
+      // console.log(input.checked);
       input.checked = !input.checked;
 
-      console.log(input.checked);
+      for (const medium of data) {
+        // console.log(input.id.includes(medium.title));
+        if (input.id.includes(medium.title)) {
+          // console.log("here");
+          medium.isBookmarked = !medium.isBookmarked;
+          // console.log(medium);
+        }
+      }
+
+      // console.log(input.checked);
     }
   });
   //   console.log(container);
