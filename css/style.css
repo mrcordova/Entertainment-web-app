@@ -402,12 +402,14 @@ main {
   /* justify-content: center; */
   display: flex;
   flex-wrap: wrap;
+  padding-inline: clamp(1rem, 0.5229rem + 2.0356vw, 1.5rem);
+  gap: clamp(0.9375rem, 0.1026rem + 3.5623vw, 1.8125rem);
   /* Mobile */
-  padding-inline: 1rem;
-  gap: 0.9375rem;
+  /* padding-inline: 1rem; */
+  /* gap: 0.9375rem; */
   /* Tablet */
-  padding-inline: 1.5rem;
-  gap: 1.8125rem;
+  /* padding-inline: 1.5rem; */
+  /* gap: 1.8125rem; */
 }
 
 #recommend-header,
