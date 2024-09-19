@@ -46,6 +46,13 @@ for (const mediumObj of data) {
         mediumObj.title
       }">
               </label>
+              <div class="picture-con">
+              <dialog open>
+                <div class="outfit-medium">
+                  <img src="./assets/icon-play.svg" alt="play">
+                  Play
+                </div>
+              </dialog>
             <picture>
             <source
             media="(min-width:48rem)"
@@ -58,6 +65,7 @@ for (const mediumObj of data) {
             src="${mediumObj.thumbnail.trending.small}"
             alt="" />
             </picture>
+            </div>
             <div class="trending-details">
             <div class="rating-con">
             <p>${mediumObj.year}</p>
@@ -89,6 +97,13 @@ for (const mediumObj of data) {
         mediumObj.title
       }">
               </label>
+              <div class="picture-con">
+              <dialog open>
+                <div class="outfit-medium">
+                  <img src="./assets/icon-play.svg" alt="play">
+                  Play
+                </div>
+              </dialog>
               <picture>
                 <source
                   media="(min-width: 90rem)"
@@ -105,6 +120,7 @@ for (const mediumObj of data) {
                   src="${mediumObj.thumbnail.regular.small}"
                   alt="the great lands" />
               </picture>
+              </div>
               <div class="trending-details">
                 <div class="rating-con">
                   <p>${mediumObj.year}</p>
@@ -165,6 +181,13 @@ function updateCards(id, clone) {
             mediumObj.title
           }">
               </label>
+              <div class="picture-con">
+              <dialog open>
+                <div class="outfit-medium">
+                  <img src="./assets/icon-play.svg" alt="play">
+                  Play
+                </div>
+              </dialog>
             <picture>
             <source
             media="(min-width: 48rem)"
@@ -177,6 +200,7 @@ function updateCards(id, clone) {
             src="${mediumObj.thumbnail.trending.small}"
             alt="" />
             </picture>
+            </div>
             <div class="trending-details">
             <div class="rating-con">
             <p>${mediumObj.year}</p>
@@ -208,6 +232,13 @@ function updateCards(id, clone) {
             mediumObj.title
           }">
               </label>
+              <div class="picture-con">
+              <dialog open>
+                <div class="outfit-medium">
+                  <img src="./assets/icon-play.svg" alt="play">
+                  Play
+                </div>
+              </dialog>
               <picture>
                 <source
                   media="(min-width: 90rem)"
@@ -224,6 +255,7 @@ function updateCards(id, clone) {
                   src="${mediumObj.thumbnail.regular.small}"
                   alt="the great lands" />
               </picture>
+              </div>
               <div class="trending-details">
                 <div class="rating-con">
                   <p>${mediumObj.year}</p>
@@ -259,6 +291,13 @@ function updateCards(id, clone) {
             mediumObj.title
           }">
               </label>
+              <div class="picture-con">
+              <dialog open>
+                <div class="outfit-medium">
+                  <img src="./assets/icon-play.svg" alt="play">
+                  Play
+                </div>
+              </dialog>
               <picture>
                 <source
                   media="(min-width: 90rem)"
@@ -275,6 +314,7 @@ function updateCards(id, clone) {
                   src="${mediumObj.thumbnail.regular.small}"
                   alt="the great lands" />
               </picture>
+              </div>
               <div class="trending-details">
                 <div class="rating-con">
                   <p>${mediumObj.year}</p>
@@ -308,6 +348,13 @@ function updateCards(id, clone) {
             mediumObj.title
           }">
               </label>
+              <div class="picture-con">
+              <dialog open>
+                <div class="outfit-medium">
+                  <img src="./assets/icon-play.svg" alt="play">
+                  Play
+                </div>
+              </dialog>
               <picture>
                 <source
                   media="(min-width: 90rem)"
@@ -324,6 +371,7 @@ function updateCards(id, clone) {
                   src="${mediumObj.thumbnail.regular.small}"
                   alt="the great lands" />
               </picture>
+              </div>
               <div class="trending-details">
                 <div class="rating-con">
                   <p>${mediumObj.year}</p>
@@ -358,6 +406,13 @@ function updateCards(id, clone) {
               mediumObj.title
             }">
               </label>
+              <div class="picture-con">
+              <dialog open>
+                <div class="outfit-medium">
+                  <img src="./assets/icon-play.svg" alt="play">
+                  Play
+                </div>
+              </dialog>
               <picture>
                 <source
                   media="(min-width: 90rem)"
@@ -374,6 +429,7 @@ function updateCards(id, clone) {
                   src="${mediumObj.thumbnail.regular.small}"
                   alt="the great lands" />
               </picture>
+              </div>
               <div class="trending-details">
                 <div class="rating-con">
                   <p>${mediumObj.year}</p>
@@ -410,6 +466,13 @@ function updateCards(id, clone) {
               mediumObj.title
             }">
               </label>
+              <div class="picture-con">
+              <dialog open>
+                <div class="outfit-medium">
+                  <img src="./assets/icon-play.svg" alt="play">
+                  Play
+                </div>
+              </dialog>
               <picture>
                 <source
                   media="(min-width: 90rem)"
@@ -426,6 +489,7 @@ function updateCards(id, clone) {
                   src="${mediumObj.thumbnail.regular.small}"
                   alt="the great lands" />
               </picture>
+              </div>
               <div class="trending-details">
                 <div class="rating-con">
                   <p>${mediumObj.year}</p>
@@ -500,9 +564,10 @@ searchInput.addEventListener("input", (e) => {
   }
   let amountFound = 0;
 
-  //   console.log(mainEle.querySelector("h2"));
+  // console.log(cards);
 
   cards.forEach((card) => {
+    console.log(card);
     const title = card.dataset.title.toLowerCase();
     // console.log(title.includes(e.currentTarget.value.toLowerCase()));
     if (title.includes(e.currentTarget.value.toLowerCase())) {
