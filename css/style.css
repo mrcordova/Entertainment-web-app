@@ -226,17 +226,6 @@ main {
   }
 }
 
-@media (hover: none) {
-  .bookmark-con:hover {
-    background-color: hsl(from var(--dark-blue) h s l / 0.5);
-    & svg {
-      & path {
-        stroke: var(--white);
-      }
-    }
-  }
-}
-
 .img-con {
   position: relative;
   width: max-content;
@@ -341,6 +330,17 @@ main {
   letter-spacing: clamp(-0.0312rem, -0.008rem + -0.0483vw, -0.0194rem);
   line-height: 1.25;
   padding-block-end: clamp(0.5625rem, -0.3321rem + 3.8168vw, 1.5rem);
+}
+
+@media (hover: none) {
+  .bookmark-con:hover {
+    background-color: hsl(from var(--dark-blue) h s l / 0.5);
+    & svg {
+      & path {
+        stroke: var(--white);
+      }
+    }
+  }
 }
 @media (min-width: 48rem) {
   header {
