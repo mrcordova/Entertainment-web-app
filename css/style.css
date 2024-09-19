@@ -226,6 +226,17 @@ main {
   }
 }
 
+@media (hover: none) {
+  .bookmark-con:hover {
+    background-color: hsl(from var(--dark-blue) h s l / 0.5);
+    & svg {
+      & path {
+        stroke: var(--white);
+      }
+    }
+  }
+}
+
 .img-con {
   position: relative;
   width: max-content;
