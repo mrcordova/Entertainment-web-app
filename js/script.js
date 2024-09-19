@@ -530,6 +530,7 @@ function changePage(e) {
       // console.log(input.checked);
       input.checked = !input.checked;
 
+      document.activeElement?.blur && document.activeElement.blur();
       for (const medium of data) {
         // console.log(input.id.includes(medium.title));
         if (input.id.includes(medium.title)) {
