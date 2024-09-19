@@ -144,24 +144,24 @@ for (const mediumObj of data) {
 }
 mainEle.appendChild(clone);
 
-const config = { attributes: false, childList: true, subtree: true };
+// const config = { attributes: false, childList: true, subtree: true };
 
 // Callback function to execute when mutations are observed
-const callback = (mutationList, observer) => {
-  for (const mutation of mutationList) {
-    if (mutation.type === "childList") {
-      //   console.log(mutation);
-    } else if (mutation.type === "attributes") {
-      console.log(`The ${mutation.attributeName} attribute was modified.`);
-    }
-  }
-};
+// const callback = (mutationList, observer) => {
+//   for (const mutation of mutationList) {
+//     if (mutation.type === "childList") {
+//       //   console.log(mutation);
+//     } else if (mutation.type === "attributes") {
+//       console.log(`The ${mutation.attributeName} attribute was modified.`);
+//     }
+//   }
+// };
 
 // Create an observer instance linked to the callback function
-const observer = new MutationObserver(callback);
+// const observer = new MutationObserver(callback);
 
 // Start observing the target node for configured mutations
-observer.observe(mainEle, config);
+// observer.observe(mainEle, config);
 function updateCards(id, clone) {
   const container = clone.getElementById(`${id}`);
   //   console.log(container.id);

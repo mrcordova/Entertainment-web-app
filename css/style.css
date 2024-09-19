@@ -310,6 +310,7 @@ main {
     }
   }
 }
+
 .recommend-con,
 #movie,
 #tv {
@@ -324,6 +325,7 @@ main {
 #tv-header,
 #bookmarked-movies-header,
 #bookmarked-tv-header {
+  /* padding-inline: clamp(1rem, 0.5229rem + 2.0356vw, 1.5rem); */
   width: 100%;
   color: var(--white);
   font-size: clamp(1.25rem, 0.5344rem + 3.0534vw, 2rem);
