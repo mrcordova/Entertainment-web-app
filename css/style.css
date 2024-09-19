@@ -154,11 +154,15 @@ main {
     width: 100%;
     caret-color: var(--red);
     font-size: clamp(1rem, 0.5229rem + 2.0356vw, 1.5rem);
+    border-bottom: 1px solid transparent;
 
     line-height: 1.25;
 
     &:hover {
       cursor: pointer;
+    }
+    &:focus {
+      border-bottom: 1px solid var(--grayish-blue);
     }
   }
 }
