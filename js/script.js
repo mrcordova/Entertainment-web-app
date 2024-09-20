@@ -1,11 +1,5 @@
-// const API_KEY = "d2b76dbf";
-// const URL = `http://omdbapi.com/?apikey=${API_KEY}&s=time&type=movie`;
-// const dataResponse = await fetch(URL);
-// console.log(await dataResponse.json());
 const dataResponse = await fetch("data.json");
 const data = await dataResponse.json();
-
-// console.log(data);
 
 const inputs = document.querySelectorAll("input[type='radio']");
 const movieTemplate = document.getElementById("movie-template");
@@ -31,7 +25,6 @@ const trendingSlider = clone.querySelector(".trending-slider");
 const recommendCon = clone.querySelector(".recommend-con");
 console.log(data);
 for (const mediumObj of data) {
-  //   console.log(mediumObj);
   if (mediumObj.isTrending) {
     trendingSlider.insertAdjacentHTML(
       "beforeend",
@@ -144,27 +137,8 @@ for (const mediumObj of data) {
 }
 mainEle.appendChild(clone);
 
-// const config = { attributes: false, childList: true, subtree: true };
-
-// Callback function to execute when mutations are observed
-// const callback = (mutationList, observer) => {
-//   for (const mutation of mutationList) {
-//     if (mutation.type === "childList") {
-//       //   console.log(mutation);
-//     } else if (mutation.type === "attributes") {
-//       console.log(`The ${mutation.attributeName} attribute was modified.`);
-//     }
-//   }
-// };
-
-// Create an observer instance linked to the callback function
-// const observer = new MutationObserver(callback);
-
-// Start observing the target node for configured mutations
-// observer.observe(mainEle, config);
 function updateCards(id, clone) {
   const container = clone.getElementById(`${id}`);
-  //   console.log(container.id);
   for (const mediumObj of data) {
     if (container.id == "home") {
       if (mediumObj.isTrending) {
@@ -516,7 +490,6 @@ function updateCards(id, clone) {
 }
 
 function changePage(e) {
-  //   console.log(mainEle.children[1]);
   const clone = templates[e.currentTarget.id].content.cloneNode(true);
   searchInput.setAttribute("data-search", e.currentTarget.id);
   updateCards(e.currentTarget.id, clone);
@@ -524,27 +497,19 @@ function changePage(e) {
   clone.children[0].addEventListener("click", (e) => {
     e.preventDefault();
     const label = e.target.closest("label.bookmark-con");
-    // console.log(close);
     if (label) {
       const input = label.querySelector("input");
-      // console.log(input.checked);
       input.checked = !input.checked;
 
       document.activeElement?.blur && document.activeElement.blur();
       for (const medium of data) {
-        // console.log(input.id.includes(medium.title));
         if (input.id.includes(medium.title)) {
-          // console.log("here");
           medium.isBookmarked = !medium.isBookmarked;
-          // console.log(medium);
         }
       }
-
-      // console.log(input.checked);
     }
   });
-  //   console.log(container);
-  //   updateCards(clone);
+
   mainEle.replaceChild(clone, mainEle.lastElementChild);
   searchInput.value = "";
 }
@@ -565,12 +530,9 @@ searchInput.addEventListener("input", (e) => {
   }
   let amountFound = 0;
 
-  // console.log(cards);
-
   cards.forEach((card) => {
     console.log(card);
     const title = card.dataset.title.toLowerCase();
-    // console.log(title.includes(e.currentTarget.value.toLowerCase()));
     if (title.includes(e.currentTarget.value.toLowerCase())) {
       card.style.display = "flex";
       amountFound++;

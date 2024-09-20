@@ -75,6 +75,7 @@ header {
 main {
   margin-block-end: 3.8125rem;
   overflow-x: auto;
+  transition: 0.5s ease;
 }
 #logo {
   width: clamp(1.5625rem, 1.145rem + 1.7812vw, 2rem);
