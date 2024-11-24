@@ -23,7 +23,7 @@ const category = {
 const clone = templates.home.content.cloneNode(true);
 const trendingSlider = clone.querySelector(".trending-slider");
 const recommendCon = clone.querySelector(".recommend-con");
-console.log(data);
+
 for (const mediumObj of data) {
   if (mediumObj.isTrending) {
     trendingSlider.insertAdjacentHTML(
